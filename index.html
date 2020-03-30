@@ -7,23 +7,34 @@
 </head>
 
 <body>
-<script language = JavaScript>
-function password() {
-	var testV = 1;
-	var pass1 = prompt('请输入密码:', '');
-	while (testV < 3) {
-		if (!pass1) history.go(-1);
-		if (pass1 == "wote842") {
-			alert('密码正确!');
-			break;
-		}
-		testV += -1;
-		var pass1 = prompt('密码错误!请重新输入:');
-	}
-	if (pass1 != "password" & testV == 3) history.go(-1);
-	return " ";
+<div class="login">
+<h1>Welcome</h1>
+<div class="text">
+<i class="fa fa-user-o" aria-hidden="true"></i><!-- Font Awesome -->
+<input type="text" placeholder="Username" id="name">
+</div>
+<div class="text">
+<i class="fa fa-lock" aria-hidden="true"></i><!-- Font Awesome -->
+<input type="password" placeholder="Password" id="pass">
+</div>
+<button onclick="login()">登录</button>
+</div>
+</body>
+<script type="text/javascript">
+function login(){
+var username = document.getElementById("name").value;
+var password = document.getElementById("pass").value;
+if(username=="lcl123" && password=="123456"){
+alert("登录成功");
+window.location.href = "index.html";
+return false;
 }
-document.write(password());
+else{
+alert("账号或密码错误");
+window.location.href= "登录界面.html";
+return false;
+}
+}
 </script>
  <a>hhhh</a>
 	</boody>
